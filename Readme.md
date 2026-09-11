@@ -48,7 +48,7 @@ This repository is where I try to study and answer those questions through **cod
 
 Each project focuses on a specific systems concept and attempts to explore it through implementation, measurement, or both.
 
-### **Database Internals & Benchmarking**
+### **[Database Internals & Benchmarking](https://github.com/priteshsurana/HandsOnSystemDesign/tree/main/db-benchmark)**
 
 A comparative benchmark of:
 
@@ -82,7 +82,7 @@ The experiments are accompanied by analysis of **why** the databases behave diff
 
 ---
 
-### **Consensus Protocol Implementation**
+### **[Consensus Protocol Implementation](https://github.com/priteshsurana/HandsOnSystemDesign/tree/main/concensus-protocol-raft)**
 
 A hands-on C++ implementation of the **Raft consensus algorithm**, built to understand distributed consensus from first principles rather than treating it as a black box.
 
