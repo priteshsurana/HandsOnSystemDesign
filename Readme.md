@@ -84,33 +84,24 @@ The experiments are accompanied by analysis of **why** the databases behave diff
 
 ### **Consensus Protocol Implementation**
 
-A hands-on implementation of a distributed consensus protocol.
+A hands-on C++ implementation of the **Raft consensus algorithm**, built to understand distributed consensus from first principles rather than treating it as a black box.
 
-The focus is on understanding the mechanics behind consensus rather than treating consensus as a black box.
+The implementation explores:
 
-Areas explored include:
+* Leader election and randomized election timeouts
+* Terms and leader transitions
+* Log replication and conflict resolution
+* Majority-based commitment
+* Persistent state and crash recovery
+* Quorum-based safety
+* Replicated state machines
+* Node crashes and recovery
+* Network partitions
+* Failure handling and cluster convergence
 
-* Leader election
+The implementation is intentionally kept small enough to **read and reason about end-to-end**. The code maps the important rules from the Raft paper to concrete implementation details, while integration tests force failure scenarios such as leader crashes and network partitions to actually happen.
 
-* Replication
-
-* Terms / epochs
-
-* Log replication
-
-* Quorum-based decisions
-
-* Failure handling
-
-* Node crashes
-
-* Network delays
-
-* Message loss
-
-* State transitions
-
-The implementation is intentionally simplified compared with production systems, with the goal of making the underlying protocol easier to reason about.
+The goal is not to build a production-ready consensus system, but to understand **why Raft works, what guarantees it provides, and what happens when the assumptions of a distributed system start breaking down.**
 
 ---
 
@@ -164,29 +155,17 @@ The objective is to develop the ability to go from:
 
 ```text
 Concept
-
    ↓
-
 Architecture
-
    ↓
-
 Implementation
-
    ↓
-
 Experiment
-
    ↓
-
 Failure
-
    ↓
-
 Measurement
-
    ↓
-
 Understanding
 ```
 
