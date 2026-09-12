@@ -60,7 +60,7 @@ inline std::string nowString() {
     auto t = system_clock::to_time_t(now);
     std::tm tmv{};
     //TODO
-    localtime_r(&t, &tmv);
+    //localtime_r(&t, &tmv);
     char buf[32];
     std::snprintf(buf, sizeof(buf), "%02d:%02d:%02d.%03d", tmv.tm_hour, tmv.tm_min, tmv.tm_sec, (int)ms.count());
     return buf;
